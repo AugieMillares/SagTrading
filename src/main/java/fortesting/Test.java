@@ -16,5 +16,7 @@ public class Test {
         String test;
         Integer testint;
 
+        String Augie;
+
     }
 }
