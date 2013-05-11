@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TestWebSocket</title>
+    <script type="text/javascript">
+        var loc = "ws://"+document.location.host+"/testWebsocket";
+        alert(loc);
+        var ws = new WebSocket(loc);
+        ws.onopen = function(){
+            console.log("Websocket ready!!");
+        }
+        ws.onmessage = function(data){
+            var mb = data.data;
+            console.log("[onmessage]....."+data.data);
+            var messageBack = document.getElementById("messageback");
+            messageBack.innerHTML = mb;
+        }
+        function sendMessage(){
+            ws.send("Test");
+        }
+    </script>
+</head>
+<body>
+       <input type="button" onclick="sendMessage()" value="Please Press to send 'Test' to the server"/>
+       <div>
+           <p id="messageback"/>
+       </div>
+</body>
+</html>
