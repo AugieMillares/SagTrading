@@ -14,5 +14,7 @@ package fortesting;
 public class Test {
     public void test(){
         String test;
+        Integer testint;
+
     }
 }
