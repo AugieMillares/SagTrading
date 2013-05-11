@@ -12,4 +12,7 @@ package fortesting;
 
 
 public class Test {
+    public void test(){
+        String test;
+    }
 }
